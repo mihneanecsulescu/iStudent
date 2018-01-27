@@ -1,2 +1,20 @@
-application:
-    base-url: "http://localhost:8080/api"
+spring:
+
+ #application:
+  #  name: istudent
+  data:
+   # rest:
+   #   base-path: /istudent
+    mongodb:
+
+      host: localhost
+      port: 27017
+      database: IStudent
+      repositories:
+         enabled: true
+#server:
+  #port: ${PORT:3333}
+
+#HTTP Server
+#   base-url: "http://localhost:8080/api"
+

@@ -13,7 +13,7 @@ import java.util.Optional;
 @Service
 @Transactional
 public class GreetingService {
-
+/*
     private static final Logger LOG = LoggerFactory.getLogger(GreetingService.class);
     private final GreetingRepository repository;
 
@@ -61,4 +61,5 @@ public class GreetingService {
         entity.setMessage(dto.getMessage());
         return entity;
     }
+    */
 }

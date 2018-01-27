@@ -7,8 +7,9 @@ import javax.persistence.EntityNotFoundException;
 import java.util.Optional;
 
 public class ResponseUtil {
-    public static ResponseEntity wrapOrNotFound(Optional<? extends Dto> dtoOptional) {
+  /*  public static ResponseEntity wrapOrNotFound(Optional<? extends Dto> dtoOptional) {
         return dtoOptional.map(ResponseEntity::ok)
                 .orElseThrow(() -> new EntityNotFoundException("Cannot find entity by id."));
     }
+*/
 }

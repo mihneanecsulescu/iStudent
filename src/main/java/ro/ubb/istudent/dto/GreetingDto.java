@@ -1,7 +1,7 @@
 package ro.ubb.istudent.dto;
 
 public class GreetingDto implements Dto {
-
+/*
     private Long id;
     private String message;
 
@@ -20,4 +20,5 @@ public class GreetingDto implements Dto {
     public void setMessage(String message) {
         this.message = message;
     }
+    */
 }

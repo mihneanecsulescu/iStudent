@@ -1,15 +1,26 @@
 package ro.ubb.istudent.domain;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.ArrayList;
 
+
+@Document
 public class Teacher {
 
+    @Id
     private Integer id;
     private String firstname;
     private String lastname;
     private String email;
     private Integer age;
+
+    @DBRef(lazy = true)
     private ArrayList<Course> courses;
+
+    @DBRef(lazy = true)
     private ArrayList<Feedback> feedbacks;
 
     public Teacher(){}

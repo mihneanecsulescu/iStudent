@@ -11,7 +11,7 @@ import javax.persistence.EntityNotFoundException;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
-
+/*
     private static final Logger LOG = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
     @ExceptionHandler(EntityNotFoundException.class)
@@ -25,4 +25,5 @@ public class GlobalExceptionHandler {
     public void processAllOtherExceptions(Exception ex) {
         LOG.error("Unexpected exception. Please add a custom exception handler for ex: {}", ex);
     }
+    */
 }

@@ -1,19 +1,41 @@
 package ro.ubb.istudent.domain;
 
+import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.ArrayList;
 
-public class Course {
 
+
+@Document
+public @Data
+class Course {
+
+    @Id
     private Integer id;
     private String name;
     private String description;
     private Integer duration; //weeks
+
+    @DBRef(lazy = true)
     private ArrayList<Material> materials;
+
+    @DBRef(lazy = true)
     private ArrayList<Assignment> assignments;
+
+    @DBRef(lazy = true)
     private ArrayList<Student> students;
+
+    @DBRef(lazy = true)
     private ArrayList<Teacher> teachers;
+
+    @DBRef(lazy = true)
     private ArrayList<Lecture> lectures;
     private String gradingCriteria;
+
+    @DBRef(lazy = true)
     private ArrayList<Feedback> feedbacks;
 
     public Course(Integer id, String name, String description, Integer duration, ArrayList<Material> materials, ArrayList<Assignment> assignments, ArrayList<Student> students, ArrayList<Teacher> teachers, ArrayList<Lecture> lectures, String gradingCriteria, ArrayList<Feedback> feedbacks) {

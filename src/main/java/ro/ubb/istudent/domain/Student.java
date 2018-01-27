@@ -1,8 +1,15 @@
 package ro.ubb.istudent.domain;
 
+
+import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "students")
 public class Student {
 
-    private Integer id;
+    @Id
+    private String id;
     private String firstname;
     private String lastname;
     private String email;
@@ -13,7 +20,7 @@ public class Student {
 
     public Student(){}
 
-    public Student(Integer id, String firstname, String lastname, String email, Integer age, Integer yearOfStudy, String countryOfResidence, String gender) {
+    public Student(String id, String firstname, String lastname, String email, Integer age, Integer yearOfStudy, String countryOfResidence, String gender) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -25,11 +32,11 @@ public class Student {
     }
 
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

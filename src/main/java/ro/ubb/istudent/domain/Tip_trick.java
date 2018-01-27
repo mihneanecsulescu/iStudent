@@ -1,12 +1,31 @@
 package ro.ubb.istudent.domain;
 
+import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+
+@Document
 public class Tip_trick {
+
+    @Id
     private Integer id;
+
+    @DBRef
     private Teacher teacher;
+
+    @DBRef
     private Course course;
+
+    @DBRef
     private Student student;
+
+    @DBRef
     private Assignment assignment;
+
     private String advice;
+
     private String trick;
 
     public Tip_trick(Integer id, Teacher teacher, Course course, Student student, Assignment assignment, String advice, String trick) {
@@ -18,6 +37,8 @@ public class Tip_trick {
         this.advice = advice;
         this.trick = trick;
     }
+
+
 
 
     public Integer getId() {

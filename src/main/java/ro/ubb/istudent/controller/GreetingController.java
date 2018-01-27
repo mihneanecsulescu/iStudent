@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class GreetingController {
-
+/*
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String home() {
         return "index.html";
     }
-
+*/
 }

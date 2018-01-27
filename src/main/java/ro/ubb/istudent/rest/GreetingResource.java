@@ -15,6 +15,7 @@ import java.net.URISyntaxException;
 @RequestMapping("/api")
 @RestController
 public class GreetingResource {
+    /*
 
     private static final String GREETING_CONTROLLER_MAPPING = "/greeting";
     private static final Logger LOG = LoggerFactory.getLogger(GreetingResource.class);
@@ -51,5 +52,5 @@ public class GreetingResource {
         GreetingDto savedGreeting = service.createGreeting(greeting);
         return ResponseEntity.created(new URI(baseUrl + GREETING_CONTROLLER_MAPPING + "/" + savedGreeting.getId())).build();
     }
-
+*/
 }
